@@ -1,0 +1,36 @@
+﻿@model ServicesSection
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<div>
+    <form method="post"> 
+        <div class="row">
+            <div class="mb-3">
+          <label asp-for="Name" class="form-label">Name</label>
+          <input asp-for="Name" class="form-control"  aria-describedby="Name">
+         
+        </div>
+        
+        
+        
+        
+        <div class="mb-3">
+            <label asp-for="ImageFile" class="form-label">ImageFile</label>
+            <input asp-for="ImageFile" class="form-control" aria-describedby="ImageFile">
+         
+        </div>
+        <div>
+            
+            
+            <label class="form-label" asp-for="Description">Description</label>
+           <input asp-for="Description" class="form-control">
+        </div>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</div>

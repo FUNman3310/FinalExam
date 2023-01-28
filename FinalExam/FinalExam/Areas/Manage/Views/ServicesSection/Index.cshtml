@@ -1,0 +1,41 @@
+﻿@model List<ServicesSection>
+@{
+    ViewData["Title"] = "Update";
+    int count = 0;
+}
+
+<h1>Services</h1>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Image</th>
+            <th scope="col">Actions</th>
+            <th>
+                <a asp-action="create" asp-controller="servicesSection" class="text-success">Create</a>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (ServicesSection services in Model)
+        {
+            <tr>
+
+                <th scope="row">@count</th>
+                <td>@services.Name</td>
+                <td style="width:150px">
+                    <img style="max-width:100%" src="../uploads/serviceSections">
+                </td>
+                <td>
+                    <a asp-action="update" asp-controller="ServicesSection" asp-route-id="@services.Id" class="text-info">Update</a>
+                    <a asp-action="delete" asp-controller="ServicesSection" asp-route-id="@services.Id" class="text-danger">Delete</a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
